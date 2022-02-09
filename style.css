@@ -91,7 +91,8 @@ select {
 }
 /* ########### END CSS RESET ############  */
 body {
-  background-color: var(--very-pale-blue);
+  background-color: #e0e8ff;
+  /* background-color: var(--very-pale-blue); */
 }
 main {
   display: flex;
@@ -106,8 +107,9 @@ main {
   left: 0;
   top: 0;
   width: 100%;
-  object-fit: cover;
   z-index: -1;
+  background-repeat: no-repeat;
+  object-fit: contain;
 }
 .mobileBackground {
   position: absolute;
@@ -115,7 +117,7 @@ main {
   left: 0;
   top: 0;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   z-index: -1;
 }
 @media (max-width: 376px) {
@@ -141,7 +143,7 @@ main {
   border-radius: 15px 15px 0 0;
 }
 .card-body {
-  margin: 0 1.3rem;
+  margin: 0 2rem;
   font-size: 14px;
 }
 .card-body-item {
@@ -163,7 +165,7 @@ p {
 }
 .plans {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 80px;
@@ -171,9 +173,13 @@ p {
   border-radius: 10px;
 }
 .plansLeft {
-  padding: 10px;
+  /* padding: 10px; */
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-
+.plans-middle {
+  margin-left: auto;
+}
 .plansMiddle-upper {
   font-weight: bold;
   display: block;
@@ -183,11 +189,14 @@ p {
   color: var(--desaturated-blue);
 }
 .plansRight {
-  padding: 20px;
+  /* padding: 20px; */
+  margin-left: auto;
+  margin-right: 1rem;
 }
 .plansRight:hover {
   cursor: pointer;
   text-decoration: none;
+  color: rgba(89, 31, 141, 0.5);
 }
 .buttons {
   display: flex;
@@ -204,14 +213,14 @@ p {
   margin-bottom: 1rem;
 }
 .button-proceed {
-  box-shadow: 5px 12px 5px 0px var(--very-pale-blue);
+  box-shadow: 5px 12px 1px 0px var(--very-pale-blue);
   background-color: var(--bright-blue);
   color: var(--pale-blue);
   border: 0;
 }
 .button-proceed:hover {
   cursor: pointer;
-  background-color: #551a8b;
+  background-color: rgba(56, 41, 224, 0.5);
 }
 .button-cancel {
   text-decoration: none;
