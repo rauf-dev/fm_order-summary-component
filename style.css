@@ -118,20 +118,20 @@ main {
   object-fit: cover;
   z-index: -1;
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .desktopBackground {
     display: none;
   }
   .mobileBackground {
     display: block;
   }
-  .card{
+  .card {
     margin: 0 1rem;
   }
 }
 
 .card {
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
   border-radius: 15px;
   background-color: white;
@@ -217,7 +217,7 @@ p {
   text-decoration: none;
   color: var(--desaturated-blue);
 }
-.button-cancel:hover{
+.button-cancel:hover {
   color: black;
 }
 .attribution {
