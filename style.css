@@ -1,0 +1,226 @@
+/* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  font-family: 'Red Hat Display', sans-serif;
+
+  /* ### Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* ########### START CSS RESET ############  */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ########### END CSS RESET ############  */
+body {
+  background-color: var(--very-pale-blue);
+}
+main {
+  display: flex;
+  width: 100%;
+  height: 98vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.desktopBackground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.mobileBackground {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+@media (max-width: 375px) {
+  .desktopBackground {
+    display: none;
+  }
+  .mobileBackground {
+    display: block;
+  }
+}
+
+.card {
+  width: 330px;
+  height: auto;
+  border-radius: 15px;
+  background-color: white;
+}
+.cardImg {
+  margin-bottom: 1.75rem;
+  border-radius: 15px 15px 0 0;
+}
+.card-body {
+  margin: 0 1.3rem;
+  font-size: 14px;
+}
+.card-body-item {
+  margin: 1.3rem 0;
+}
+h1 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+p {
+  text-align: center;
+  font-size: 16px;
+  color: var(--desaturated-blue);
+  padding: 0 10px;
+  line-height: 1.8;
+  font-weight: lighter;
+}
+.plans {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+}
+.plansLeft {
+  padding: 10px;
+}
+
+.plansMiddle-upper {
+  font-weight: bold;
+  display: block;
+  color: var(--dark-blue);
+}
+.plansMiddle-lower {
+  color: var(--desaturated-blue);
+}
+.plansRight {
+  padding: 20px;
+}
+.plansRight:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+}
+.button {
+  width: 100%;
+  height: 45px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+.button-proceed {
+  box-shadow: 5px 12px 5px 0px var(--very-pale-blue);
+  background-color: var(--bright-blue);
+  color: var(--pale-blue);
+  border: 0;
+}
+.button-proceed:hover {
+  cursor: pointer;
+  background-color: #551a8b;
+}
+.button-cancel {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+.button-cancel:hover{
+  color: black;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
